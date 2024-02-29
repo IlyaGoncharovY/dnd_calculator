@@ -6,7 +6,7 @@ export const InputContainer = () => {
 
   return (
     <div>
-      <section>{displayValue}</section>
+      <section>{displayValue === 'Infinity' ? 'Не определено' : displayValue}</section>
     </div>
   );
 };
