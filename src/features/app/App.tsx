@@ -1,4 +1,4 @@
-import {EqualContainer, InputContainer, KeyBoardContainer} from '../calculator';
+import {EqualContainer, InputContainer, KeyBoardContainer, ExpressionsContainer} from '../calculator';
 
 function App() {
 
@@ -6,6 +6,7 @@ function App() {
     <>
       <InputContainer/>
       <KeyBoardContainer/>
+      <ExpressionsContainer/>
       <EqualContainer/>
     </>
   );
