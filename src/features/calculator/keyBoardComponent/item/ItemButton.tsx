@@ -2,7 +2,7 @@ import {FC} from 'react';
 
 import {useAppDispatch} from '../../../../store';
 import {ArrButtonType} from '../../../../common';
-import {inputDigit} from '../../reducer/CalculatorSlice.ts';
+import {inputDecimal, inputDigit} from '../../reducer/CalculatorSlice.ts';
 
 interface IItemButton {
     buttonValue: ArrButtonType
@@ -11,15 +11,15 @@ export const ItemButton:FC<IItemButton> = ({buttonValue}) => {
 
   const dispatch = useAppDispatch();
 
-  const onClickInputDigit = (value: string) => {
-    dispatch(inputDigit(value));
+  const onClickChoiceButton = (value: string) => {
+    value === '.' ? dispatch(inputDecimal())
+      : dispatch(inputDigit(value));
   };
-
 
   return (
     <span>
       <button
-        onClick={() => onClickInputDigit(buttonValue.value)}>
+        onClick={() => onClickChoiceButton(buttonValue.value)}>
         {buttonValue.value}
       </button>
     </span>
