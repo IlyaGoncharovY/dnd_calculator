@@ -51,8 +51,8 @@ const calculatorSlice = createSlice({
         state.displayValue = state.currentValue;
       }
     },
-    inputOperator: (state, action: PayloadAction<{ operator: string }>) => {
-      const { operator } = action.payload;
+    inputOperator: (state, action: PayloadAction<string>) => {
+      const operator = action.payload;
       if (state.operator === null) {
         state.previousValue = state.currentValue;
       } else {

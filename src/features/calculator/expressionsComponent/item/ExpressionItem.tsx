@@ -12,7 +12,7 @@ export const ExpressionItem: FC<IExpressionItem> = ({expressionValue}) => {
   const dispatch = useAppDispatch();
 
   const onClickExpression = (operator: string) => {
-    operator === 'CE' ? dispatch(clearCalculator()) : dispatch(inputOperator({operator}))
+    operator === 'CE' ? dispatch(clearCalculator()) : dispatch(inputOperator(operator))
     ;
   };
 
