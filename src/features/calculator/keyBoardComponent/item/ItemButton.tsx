@@ -3,6 +3,7 @@ import {FC} from 'react';
 import {useAppDispatch} from '../../../../store';
 import {ArrButtonType} from '../../../../common';
 import {inputDecimal, inputDigit} from '../../reducer/CalculatorSlice.ts';
+import {UniversalButton} from '../../../../common/Components/UniversalButton.tsx';
 
 interface IItemButton {
     buttonValue: ArrButtonType
@@ -17,11 +18,8 @@ export const ItemButton:FC<IItemButton> = ({buttonValue}) => {
   };
 
   return (
-    <span>
-      <button
-        onClick={() => onClickChoiceButton(buttonValue.value)}>
-        {buttonValue.value}
-      </button>
-    </span>
+    <>
+      <UniversalButton buttonValue={buttonValue} onClickHandler={onClickChoiceButton}/>
+    </>
   );
 };
