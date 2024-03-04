@@ -20,7 +20,7 @@ export const arrButtons: ArrButtonType[] = [
 export const arrExpressions: ArrButtonType[] = [
   {id: 12, value: '+'},
   {id: 13, value: '-'},
-  {id: 14, value: '*'},
+  {id: 14, value: 'x'},
   {id: 15, value: '/'},
   {id: 16, value: 'CE'},
 ];
