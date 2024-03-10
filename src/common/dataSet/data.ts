@@ -26,8 +26,15 @@ export const arrExpressions: ArrButtonType[] = [
 ];
 
 export const ID_ELEMENT = {
-  display: 'inputContainer',
+  display: 'DisplayContainer',
   keyboard: 'KeyBoardContainer',
   expression: 'ExpressionsContainer',
   equal: 'EqualContainer',
 };
+
+export const ELEMENTS = [
+  {id: 1, value: 'DisplayContainer'},
+  {id: 2, value: 'KeyBoardContainer'},
+  {id: 3, value: 'ExpressionsContainer'},
+  {id: 4, value: 'EqualContainer'},
+];

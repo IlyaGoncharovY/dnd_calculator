@@ -1,4 +1,4 @@
-export * from './inputComponent/InputContainer.tsx';
+export * from './displayComponent/DisplayContainer.tsx';
 export * from './keyBoardComponent/KeyBoardContainer.tsx';
 export * from './equallyComponent/EqualContainer.tsx';
 export * from './expressionsComponent/ExpressionsContainer.tsx';
