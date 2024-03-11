@@ -3,6 +3,21 @@ export type ArrButtonType = {
     value: string
 }
 
+export type ELEMENTSType = {
+  id: number
+  name: string
+  column: ColumnTypes
+}
+
+export enum ColumnTypes {
+  CONSTRUCTOR = 'Constructor',
+  CALCULATOR = 'Calculator',
+}
+
+export enum elementType {
+  ORDER = 'Order',
+}
+
 export const arrButtons: ArrButtonType[] = [
   {id: 1, value: '1'},
   {id: 2, value: '2'},
@@ -32,9 +47,9 @@ export const ID_ELEMENT = {
   equal: 'EqualContainer',
 };
 
-export const ELEMENTS = [
-  {id: 1, value: 'DisplayContainer'},
-  {id: 2, value: 'KeyBoardContainer'},
-  {id: 3, value: 'ExpressionsContainer'},
-  {id: 4, value: 'EqualContainer'},
+export const ELEMENTS: ELEMENTSType[] = [
+  {id: 1, name: 'DisplayContainer', column: ColumnTypes.CONSTRUCTOR},
+  {id: 2, name: 'ExpressionsContainer', column: ColumnTypes.CONSTRUCTOR},
+  {id: 3, name: 'KeyBoardContainer', column: ColumnTypes.CONSTRUCTOR},
+  {id: 4, name: 'EqualContainer', column: ColumnTypes.CONSTRUCTOR},
 ];
