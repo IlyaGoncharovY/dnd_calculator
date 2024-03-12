@@ -18,8 +18,10 @@ export const ItemButton:FC<IItemButton> = ({buttonValue}) => {
   };
 
   return (
-    <>
+    <span style={{
+
+    }}>
       <UniversalButton buttonValue={buttonValue} onClickHandler={onClickChoiceButton}/>
-    </>
+    </span>
   );
 };

@@ -26,10 +26,9 @@ export const Column: FC<IColumn> = ({children, name}) => {
       <div
         style={{
           backgroundColor: '#e3e7ee',
-          width: '270px',
+          width: '200px',
           padding: '15px',
-          minHeight: '170px',
-          maxHeight: '690px',
+          height: '480px',
           borderRadius: '5px',
         }}
       >
@@ -37,8 +36,7 @@ export const Column: FC<IColumn> = ({children, name}) => {
           ref={dropRef}
           style={{
             width: '100%',
-            height: '75%',
-            padding: '4px',
+            height: '100%',
             border: isOver ? 'dashed 1px black' : '  ',
           }}
         >{children}

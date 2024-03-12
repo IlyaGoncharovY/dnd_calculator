@@ -1,6 +1,10 @@
 import {useEffect, useState} from 'react';
 
-import {ColumnTypes, ELEMENTS, ELEMENTSType} from '../../../../common';
+import {
+  ColumnTypes,
+  ELEMENTS,
+  ELEMENTSType,
+} from '../../../../common';
 
 import {Column} from './item/Column.tsx';
 import {Elements} from './item/Elements.tsx';
@@ -9,7 +13,7 @@ export const DashBoardPage = () => {
 
   const [orders, setOrders] = useState<ELEMENTSType[]>([]);
 
-  const { CONSTRUCTOR, CALCULATOR } = ColumnTypes;
+  const {CONSTRUCTOR, CALCULATOR} = ColumnTypes;
 
   useEffect(() => {
     setOrders(ELEMENTS);

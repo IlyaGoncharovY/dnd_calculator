@@ -8,17 +8,16 @@ export const EqualContainer = () => {
 
   const onClickEqual = () => dispatch(calculateResult());
 
-  // const handleDragStart = (event: React.DragEvent<HTMLDivElement>) => {
-  //   event.dataTransfer.setData('text', event.currentTarget.id);
-  // };
 
   return (
-    <div
-      // draggable={true}
-      // onDragStart={handleDragStart}
-      id={ID_ELEMENT.equal}
-    >
-      <button onClick={onClickEqual}>=</button>
+    <div id={ID_ELEMENT.equal}>
+      <button
+        style={{
+          width: '100%',
+          height: '60px',
+        }}
+        onClick={onClickEqual}
+      >=</button>
     </div>
   );
 };

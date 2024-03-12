@@ -12,10 +12,16 @@ export const UniversalButton: FC<IUniversalButton> = ({
   onClickHandler,
 }) => {
   return (
-    <span>
-      <button onClick={() => onClickHandler(buttonValue.value)}>
+    <>
+      <button
+        onClick={() => onClickHandler(buttonValue.value)}
+        style={{
+          width: buttonValue.value === '0' ? '133px' : '66px',
+          height: '66px',
+        }}
+      >
         {buttonValue.value}
       </button>
-    </span>
+    </>
   );
 };

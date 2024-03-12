@@ -67,7 +67,6 @@ export const Elements: FC<IElements> = ({name, setOrders}) => {
     <div
       ref={drag}
       title={name}
-      className="card"
       style={{
         opacity: isDragging ? '0.5' : '1',
         marginBottom: '15px',

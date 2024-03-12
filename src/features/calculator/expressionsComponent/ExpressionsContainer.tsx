@@ -4,14 +4,12 @@ import {ExpressionItem} from './item/ExpressionItem.tsx';
 
 export const ExpressionsContainer = () => {
 
-  // const handleDragStart = (event: React.DragEvent<HTMLDivElement>) => {
-  //   event.dataTransfer.setData('text', event.currentTarget.id);
-  // };
-
   return (
     <div
-      // draggable={true}
-      // onDragStart={handleDragStart}
+      style={{
+        display: 'flex',
+        flexWrap: 'nowrap',
+      }}
       id={ID_ELEMENT.expression}
     >
       {arrExpressions.map(expression =>

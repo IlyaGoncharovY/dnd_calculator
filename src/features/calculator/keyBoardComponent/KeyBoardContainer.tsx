@@ -4,21 +4,23 @@ import {ItemButton} from './item/ItemButton.tsx';
 
 export const KeyBoardContainer = () => {
 
-  // const handleDragStart = (event: React.DragEvent<HTMLDivElement>) => {
-  //   event.dataTransfer.setData('text', event.currentTarget.id);
-  // };
-
   return (
     <div
-      // draggable={true}
-      // onDragStart={handleDragStart}
       id={ID_ELEMENT.keyboard}
+      style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+      }}
     >
       {arrButtons.map(buttonValue =>
-        <ItemButton
-          key={buttonValue.id}
-          buttonValue={buttonValue}
-        />,
+        <span>
+          <ItemButton
+            key={buttonValue.id}
+            buttonValue={buttonValue}
+          />
+        </span>,
       )}
     </div>
   );
