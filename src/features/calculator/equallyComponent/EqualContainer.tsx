@@ -2,6 +2,8 @@ import {ID_ELEMENT} from '../../../common';
 import {useAppDispatch} from '../../../store';
 import {calculateResult} from '../reducer/CalculatorSlice.ts';
 
+import s from './Equal.module.css';
+
 export const EqualContainer = () => {
 
   const dispatch = useAppDispatch();
@@ -12,10 +14,7 @@ export const EqualContainer = () => {
   return (
     <div id={ID_ELEMENT.equal}>
       <button
-        style={{
-          width: '100%',
-          height: '60px',
-        }}
+        className={s.equalContainer}
         onClick={onClickEqual}
       >=</button>
     </div>

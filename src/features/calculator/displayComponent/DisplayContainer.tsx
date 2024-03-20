@@ -1,5 +1,7 @@
 import {useAppSelector} from '../../../store';
 
+import s from './Display.module.css';
+
 export const DisplayContainer = () => {
 
   const displayValue = useAppSelector(state => state.CalculatorReducer.displayValue);
@@ -8,14 +10,9 @@ export const DisplayContainer = () => {
     <div style={{
       height: '45px',
     }}>
-      <div style={{
-        backgroundColor: 'white',
-        height: '100%',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-        padding: '2px',
-      }}>{displayValue === 'Infinity' ? 'Не определено' : displayValue}</div>
+      <div
+        className={s.displayContainer}
+      >{displayValue === 'Infinity' ? 'Не определено' : displayValue}</div>
     </div>
   );
 };

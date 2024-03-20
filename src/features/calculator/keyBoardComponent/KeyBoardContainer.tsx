@@ -2,17 +2,14 @@ import {arrButtons, ID_ELEMENT} from '../../../common';
 
 import {ItemButton} from './item/ItemButton.tsx';
 
+import s from './KeyBoard.module.css';
+
 export const KeyBoardContainer = () => {
 
   return (
     <div
       id={ID_ELEMENT.keyboard}
-      style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-      }}
+      className={s.keyBoardContainer}
     >
       {arrButtons.map(buttonValue =>
         <span>
