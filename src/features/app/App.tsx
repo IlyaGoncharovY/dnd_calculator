@@ -4,7 +4,7 @@ function App() {
 
   return (
     <div>
-      <button>editMode</button>
+      <button style={{color: 'green'}}>editMode</button>
       <DashBoardPage/>
     </div>
   );
