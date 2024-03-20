@@ -1,7 +1,9 @@
 import {FC, ReactNode} from 'react';
 import {useDrop} from 'react-dnd';
 
-import {elementType} from '../../../../../common';
+import {elementType} from '../../../../../../common';
+
+import s from './Column.module.css';
 
 interface IColumn {
     name: string
@@ -23,22 +25,10 @@ export const Column: FC<IColumn> = ({children, name}) => {
 
   return (
     <div >
-      <div
-        style={{
-          backgroundColor: '#e3e7ee',
-          width: '200px',
-          padding: '15px',
-          height: '480px',
-          borderRadius: '5px',
-        }}
-      >
+      <div className={s.columnContainer}>
         <div
           ref={dropRef}
-          style={{
-            width: '100%',
-            height: '100%',
-            border: isOver ? 'dashed 1px black' : '  ',
-          }}
+          className={`${s.columnChildrenContainer} ${isOver ? s.reducedBorder : s.normalBorder}`}
         >{children}
         </div>
       </div>

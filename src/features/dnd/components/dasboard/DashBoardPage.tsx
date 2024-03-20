@@ -6,8 +6,9 @@ import {
   ELEMENTSType,
 } from '../../../../common';
 
-import {Column} from './item/Column.tsx';
-import {Elements} from './item/Elements.tsx';
+import {Column} from './item/column/Column.tsx';
+import {Elements} from './item/element/Elements.tsx';
+import s from './DashboardPage.module.css';
 
 export const DashBoardPage = () => {
 
@@ -35,14 +36,7 @@ export const DashBoardPage = () => {
 
   return (
     <div>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          marginTop: '20px',
-          gap: '30px',
-        }}
-      >
+      <div className={s.dashboardContainer}>
         <Column name={CONSTRUCTOR}>{columnItem(CONSTRUCTOR)}</Column>
         <Column name={CALCULATOR}>{columnItem(CALCULATOR)}</Column>
       </div>
